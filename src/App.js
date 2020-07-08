@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
-import CategoriasContext from'./components/context/CategoriasContext';
 
+import CategoriasProvider from'./context/CategoriasContext';
+import RecetasProvider from './context/RecetasContext';
+ 
 function App() {
   return (
-    <CategoriasContext>
+    <CategoriasProvider>
+      <RecetasProvider>
+
       <Header />
 
       <div className="container mt-5" >
@@ -13,8 +17,8 @@ function App() {
           <Formulario />
         </div>
       </div>
-
-    </CategoriasContext>
+    </RecetasProvider>
+    </CategoriasProvider>
   );
 }
 
