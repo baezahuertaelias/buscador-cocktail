@@ -31,7 +31,7 @@ const RecetasProvider = (props) => {
 
     /* NO OLVIDAR! El valor tiene que estan en doble llave */
     return (
-        <RecetasContext.Provider value={{ buscarRecetas, guardarConsultar }}>
+        <RecetasContext.Provider value={{ recetas, buscarRecetas, guardarConsultar }}>
             {props.children}
         </RecetasContext.Provider>
     );
