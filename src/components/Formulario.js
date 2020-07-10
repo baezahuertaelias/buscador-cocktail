@@ -33,7 +33,7 @@ const Formulario = () => {
                 guardarConsultar(true); }
                 }>
             <fieldset className="text-center">
-                <legend>Busca bebidas por categoria o ingrediente</legend>
+                <legend>Search drinks by category or ingredient</legend>
             </fieldset>
 
             <div className="row mt-4">
@@ -42,13 +42,13 @@ const Formulario = () => {
                         name="nombre"
                         className="form-control"
                         type="text"
-                        placeholder="Buscar por ingrediente"
+                        placeholder="Search by ingredient"
                         onChange={obtenerDatosReceta}
                     />
                 </div>
                 <div className="col-md-4">
                     <select className="form-control" name="categoria" onChange={obtenerDatosReceta}>
-                        <option value="">Seleccione</option>
+                        <option value="">Select</option>
                         {categorias.map(categoria => (
                             <option key={categoria.strCategory} value={categoria.strCategory} >{categoria.strCategory}</option>
                         ))}
@@ -58,7 +58,7 @@ const Formulario = () => {
                     <input
                         className="btn btn-block btn-primary"
                         type="submit"
-                        value="Buscar por ingrediente"
+                        value="Search by ingredient"
                     />
                 </div>
 
